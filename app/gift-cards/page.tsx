@@ -15,44 +15,44 @@ export default function GiftCardsPage() {
           <Carousel
             images={[
               { 
-                src: "/placeholder.svg?text=Mother's+Day+Gift+Cards&bg=pink", 
+                src: "/placeholder.svg?height=400&width=800&text=Mother's+Day+Gift+Cards&bg=pink", 
                 alt: "Shop Mother's Day gift cards",
                 title: "Gifts for Mother's Day",
                 subtitle: ""
               },
               { 
-                src: "/placeholder.svg?text=Birthday+Gift+Cards&bg=blue", 
+                src: "/placeholder.svg?height=400&width=800&text=Birthday+Gift+Cards&bg=blue", 
                 alt: "Birthday Gift Cards",
                 title: "Birthday Gift Cards",
                 subtitle: "for everyone on your list"
               },
               { 
-                src: "/placeholder.svg?text=Graduation+Gift+Cards&bg=yellow", 
+                src: "/placeholder.svg?height=400&width=800&text=Graduation+Gift+Cards&bg=yellow", 
                 alt: "Graduation Gift Cards",
                 title: "Graduation Gift Cards",
                 subtitle: "celebrate their achievement"
               },
               { 
-                src: "/placeholder.svg?text=Thank+You+Gift+Cards&bg=green", 
+                src: "/placeholder.svg?height=400&width=800&text=Thank+You+Gift+Cards&bg=green", 
                 alt: "Thank You Gift Cards",
                 title: "Thank You Gift Cards",
                 subtitle: "show your appreciation"
               },
               { 
-                src: "/placeholder.svg?text=Wedding+Gift+Cards&bg=lavender", 
+                src: "/placeholder.svg?height=400&width=800&text=Wedding+Gift+Cards&bg=lavender", 
                 alt: "Wedding Gift Cards",
                 title: "Wedding Gift Cards",
                 subtitle: "perfect for the happy couple"
               },
               { 
-                src: "/placeholder.svg?text=Holiday+Gift+Cards&bg=red", 
+                src: "/placeholder.svg?height=400&width=800&text=Holiday+Gift+Cards&bg=red", 
                 alt: "Holiday Gift Cards",
                 title: "Holiday Gift Cards",
                 subtitle: "spread some cheer"
               },
             ]}
             aspectRatio="21/9"
-            className="relative h-48 md:h-64 rounded-lg overflow-hidden"
+            className="relative h-48 md:h-64 rounded-lg overflow-hidden max-w-4xl mx-auto"
             showOverlay={true}
           />
         </div>
