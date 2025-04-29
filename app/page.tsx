@@ -122,44 +122,243 @@ export default function Home() {
       </header>
 
       <main className="flex-1 bg-gray-100">
-        {/* Hero Banner */}
+        {/* Hero Banner Carousel */}
         <div className="relative">
           <Carousel 
             images={[
-              { src: "/placeholder.svg?height=600&width=1600&text=Shop+Books", alt: "Shop Books" },
-              { src: "/placeholder.svg?height=600&width=1600&text=Electronics+Sale", alt: "Electronics Sale" },
-              { src: "/placeholder.svg?height=600&width=1600&text=Fashion+Deals", alt: "Fashion Deals" },
-              { src: "/placeholder.svg?height=600&width=1600&text=Home+Essentials", alt: "Home Essentials" },
-              { src: "/placeholder.svg?height=600&width=1600&text=Summer+Outdoor", alt: "Summer Outdoor" },
-              { src: "/placeholder.svg?height=600&width=1600&text=Back+to+School", alt: "Back to School" },
+              { 
+                src: "/placeholder.svg?height=600&width=1600&text=Shop+Books", 
+                alt: "Shop Books",
+                title: "Shop Books",
+                subtitle: "explore titles"
+              },
+              { 
+                src: "/placeholder.svg?height=600&width=1600&text=Free+international+returns", 
+                alt: "Free international returns",
+                title: "Free international returns",
+                subtitle: "on qualifying items*"
+              },
+              { 
+                src: "/placeholder.svg?height=600&width=1600&text=Kitchen+favorites", 
+                alt: "Kitchen favorites",
+                title: "Kitchen favorites",
+                subtitle: "under $50"
+              },
+              { 
+                src: "/placeholder.svg?height=600&width=1600&text=New+arrivals+in+Toys", 
+                alt: "New arrivals in Toys",
+                title: "New arrivals in Toys",
+                subtitle: ""
+              },
+              { 
+                src: "/placeholder.svg?height=600&width=1600&text=Gifts+for+Mother's+Day", 
+                alt: "Gifts for Mother's Day",
+                title: "Gifts for Mother's Day",
+                subtitle: ""
+              },
             ]}
             aspectRatio="21/9"
-            className="w-full h-[300px] md:h-[400px] relative overflow-hidden"
+            className="w-full relative"
+            showOverlay={true}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-100"></div>
+        </div>
+
+        {/* Amazon Canada Notice */}
+        <div className="bg-white border-b py-2 px-4 text-center text-sm">
+          You are on amazon.com. You can also shop on Amazon Canada for millions of products with fast local delivery. 
+          <Link href="https://amazon.ca" className="text-[#007185] hover:text-orange-500 hover:underline">
+            Click here to go to amazon.ca
+          </Link>
         </div>
 
         {/* Product Categories */}
-        <div className="container mx-auto px-4 -mt-20 relative z-10">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-            {categories.map((category, index) => (
-              <Card key={index} className="bg-white shadow-sm hover:shadow-md transition-shadow">
-                <CardContent className="p-4">
-                  <h2 className="font-bold text-lg mb-2">{category.name}</h2>
-                  <div className="aspect-square relative mb-2">
-                    <Image
-                      src={category.image || "/placeholder.svg"}
-                      alt={category.name}
-                      fill
-                      className="object-cover rounded-md"
-                    />
+        <div className="container mx-auto px-4 py-6">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+            {/* Gaming accessories */}
+            <Card className="bg-white shadow-sm hover:shadow-md transition-shadow">
+              <CardContent className="p-4">
+                <h2 className="font-bold text-lg mb-3">Gaming accessories</h2>
+                <div className="grid grid-cols-2 gap-3">
+                  <div>
+                    <div className="aspect-square relative mb-2">
+                      <Image
+                        src="/placeholder.svg?text=Headset"
+                        alt="Headsets"
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                    <p className="text-xs text-center">Headsets</p>
                   </div>
-                  <Link href="#" className="text-sm text-blue-600 hover:text-orange-500 hover:underline">
-                    Shop now
-                  </Link>
-                </CardContent>
-              </Card>
-            ))}
+                  <div>
+                    <div className="aspect-square relative mb-2">
+                      <Image
+                        src="/placeholder.svg?text=Keyboard"
+                        alt="Keyboards"
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                    <p className="text-xs text-center">Keyboards</p>
+                  </div>
+                  <div>
+                    <div className="aspect-square relative mb-2">
+                      <Image
+                        src="/placeholder.svg?text=Mouse"
+                        alt="Computer mice"
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                    <p className="text-xs text-center">Computer mice</p>
+                  </div>
+                  <div>
+                    <div className="aspect-square relative mb-2">
+                      <Image
+                        src="/placeholder.svg?text=Chair"
+                        alt="Chairs"
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                    <p className="text-xs text-center">Chairs</p>
+                  </div>
+                </div>
+                <Link href="/" className="text-[#007185] hover:text-orange-500 hover:underline text-sm block mt-3">
+                  See more
+                </Link>
+              </CardContent>
+            </Card>
+
+            {/* Shop deals in Fashion */}
+            <Card className="bg-white shadow-sm hover:shadow-md transition-shadow">
+              <CardContent className="p-4">
+                <h2 className="font-bold text-lg mb-3">Shop deals in Fashion</h2>
+                <div className="grid grid-cols-2 gap-3">
+                  <div>
+                    <div className="aspect-square relative mb-2">
+                      <Image
+                        src="/placeholder.svg?text=Jeans"
+                        alt="Jeans under $50"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <p className="text-xs text-center">Jeans under $50</p>
+                  </div>
+                  <div>
+                    <div className="aspect-square relative mb-2">
+                      <Image
+                        src="/placeholder.svg?text=Tops"
+                        alt="Tops under $25"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <p className="text-xs text-center">Tops under $25</p>
+                  </div>
+                  <div>
+                    <div className="aspect-square relative mb-2">
+                      <Image
+                        src="/placeholder.svg?text=Dresses"
+                        alt="Dresses under $30"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <p className="text-xs text-center">Dresses under $30</p>
+                  </div>
+                  <div>
+                    <div className="aspect-square relative mb-2">
+                      <Image
+                        src="/placeholder.svg?text=Shoes"
+                        alt="Shoes under $50"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <p className="text-xs text-center">Shoes under $50</p>
+                  </div>
+                </div>
+                <Link href="/" className="text-[#007185] hover:text-orange-500 hover:underline text-sm block mt-3">
+                  See all deals
+                </Link>
+              </CardContent>
+            </Card>
+
+            {/* Get your game on */}
+            <Card className="bg-white shadow-sm hover:shadow-md transition-shadow">
+              <CardContent className="p-4">
+                <h2 className="font-bold text-lg mb-3">Get your game on</h2>
+                <div className="aspect-[4/5] relative mb-3">
+                  <Image
+                    src="/placeholder.svg?text=Gaming+PC"
+                    alt="Gaming PC"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                <Link href="/" className="text-[#007185] hover:text-orange-500 hover:underline text-sm block mt-3">
+                  Shop gaming
+                </Link>
+              </CardContent>
+            </Card>
+
+            {/* Shop for your home essentials */}
+            <Card className="bg-white shadow-sm hover:shadow-md transition-shadow">
+              <CardContent className="p-4">
+                <h2 className="font-bold text-lg mb-3">Shop for your home essentials</h2>
+                <div className="grid grid-cols-2 gap-3">
+                  <div>
+                    <div className="aspect-square relative mb-2">
+                      <Image
+                        src="/placeholder.svg?text=Cleaning"
+                        alt="Cleaning Tools"
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                    <p className="text-xs text-center">Cleaning Tools</p>
+                  </div>
+                  <div>
+                    <div className="aspect-square relative mb-2">
+                      <Image
+                        src="/placeholder.svg?text=Storage"
+                        alt="Home Storage"
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                    <p className="text-xs text-center">Home Storage</p>
+                  </div>
+                  <div>
+                    <div className="aspect-square relative mb-2">
+                      <Image
+                        src="/placeholder.svg?text=Decor"
+                        alt="Home Decor"
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                    <p className="text-xs text-center">Home Decor</p>
+                  </div>
+                  <div>
+                    <div className="aspect-square relative mb-2">
+                      <Image
+                        src="/placeholder.svg?text=Bedding"
+                        alt="Bedding"
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                    <p className="text-xs text-center">Bedding</p>
+                  </div>
+                </div>
+                <Link href="/" className="text-[#007185] hover:text-orange-500 hover:underline text-sm block mt-3">
+                  Discover more in Home
+                </Link>
+              </CardContent>
+            </Card>
           </div>
         </div>
 
