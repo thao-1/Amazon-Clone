@@ -15,37 +15,37 @@ export default function GiftCardsPage() {
           <Carousel
             images={[
               { 
-                src: "/images/GiftCard1.png", 
+                src: "/images/gift-cards/GiftCard1.png", 
                 alt: "Shop Mother's Day gift cards",
                 title: "Gifts for Mother's Day",
                 subtitle: ""
               },
               { 
-                src: "/images/GiftCard2.png", 
+                src: "/images/gift-cards/GiftCard2.png", 
                 alt: "Birthday Gift Cards",
                 title: "Birthday Gift Cards",
                 subtitle: "for everyone on your list"
               },
               { 
-                src: "/images/GiftCard3.png", 
+                src: "/images/gift-cards/GiftCard3.png", 
                 alt: "Graduation Gift Cards",
                 title: "Graduation Gift Cards",
                 subtitle: "celebrate their achievement"
               },
               { 
-                src: "/images/GiftCard4.png", 
+                src: "/images/gift-cards/GiftCard4.png", 
                 alt: "Thank You Gift Cards",
                 title: "Thank You Gift Cards",
                 subtitle: "show your appreciation"
               },
               { 
-                src: "/images/GiftCard5.png", 
+                src: "/images/gift-cards/GiftCard5.png", 
                 alt: "Wedding Gift Cards",
                 title: "Wedding Gift Cards",
                 subtitle: "perfect for the happy couple"
               },
               { 
-                src: "/images/GiftCard6.png", 
+                src: "/images/gift-cards/GiftCard6.png", 
                 alt: "Holiday Gift Cards",
                 title: "Holiday Gift Cards",
                 subtitle: "spread some cheer"

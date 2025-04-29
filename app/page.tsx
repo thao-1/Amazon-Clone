@@ -545,26 +545,6 @@ export default function Home() {
   )
 }
 
-// Sample data
-const categories = [
-  {
-    name: "Electronics",
-    image: "/placeholder.svg?height=300&width=300",
-  },
-  {
-    name: "Home & Kitchen",
-    image: "/placeholder.svg?height=300&width=300",
-  },
-  {
-    name: "Fashion",
-    image: "/placeholder.svg?height=300&width=300",
-  },
-  {
-    name: "Books",
-    image: "/placeholder.svg?height=300&width=300",
-  },
-]
-
 const products = [
   {
     name: "Wireless Noise Cancelling Headphones with 30-Hour Battery Life",
@@ -573,7 +553,7 @@ const products = [
     discount: 40,
     rating: 4,
     reviews: 2345,
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/images/main/Amazon22.png",
   },
   {
     name: "Smart Watch with Heart Rate Monitor and GPS",
@@ -582,7 +562,7 @@ const products = [
     discount: 33,
     rating: 5,
     reviews: 1876,
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/images/main/Amazon23.png",
   },
   {
     name: "Robot Vacuum Cleaner with Mapping Technology",
@@ -591,7 +571,7 @@ const products = [
     discount: 40,
     rating: 4,
     reviews: 987,
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/images/main/Amazon24.png",
   },
   {
     name: "4K Ultra HD Smart LED TV, 55 Inch",
@@ -600,7 +580,7 @@ const products = [
     discount: 28,
     rating: 4,
     reviews: 3421,
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/images/main/Amazon25.png",
   },
   {
     name: "Portable Bluetooth Speaker with 24-Hour Playtime",
@@ -609,7 +589,7 @@ const products = [
     discount: 38,
     rating: 5,
     reviews: 2109,
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/images/main/Amazon26.png",
   },
 ]
 
@@ -619,41 +599,41 @@ const recommendations = [
     price: 59.99,
     rating: 4,
     reviews: 1234,
-    image: "/placeholder.svg?height=200&width=200",
+    image: "/images/main/Amazon27.png",
   },
   {
     name: "Stainless Steel Water Bottle, 24oz",
     price: 24.99,
     rating: 5,
     reviews: 876,
-    image: "/placeholder.svg?height=200&width=200",
+    image: "/images/main/Amazon28.png",
   },
   {
     name: "Ergonomic Office Chair with Lumbar Support",
     price: 149.99,
     rating: 4,
     reviews: 543,
-    image: "/placeholder.svg?height=200&width=200",
+    image: "/images/main/Amazon29.png",
   },
   {
     name: "Wireless Charging Pad for iPhone and Android",
     price: 29.99,
     rating: 4,
     reviews: 987,
-    image: "/placeholder.svg?height=200&width=200",
+    image: "/images/main/Amazon30.png",
   },
   {
     name: "Smart Home Security Camera with Night Vision",
     price: 89.99,
     rating: 4,
     reviews: 432,
-    image: "/placeholder.svg?height=200&width=200",
+    image: "/images/main/Amazon31.png",
   },
   {
     name: "Non-Stick Cookware Set, 10-Piece",
     price: 119.99,
     rating: 5,
     reviews: 765,
-    image: "/placeholder.svg?height=200&width=200",
+    image: "/images/main/Amazon32.png",
   },
 ]
