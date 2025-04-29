@@ -4,6 +4,7 @@ import { ChevronRight } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import { Carousel } from "@/components/ui/carousel"
 
 export default function GiftCardsPage() {
   return (
@@ -11,35 +12,24 @@ export default function GiftCardsPage() {
       {/* Hero Banner */}
       <div className="w-full bg-pink-100 py-8">
         <div className="container mx-auto px-4">
-          <div className="relative h-48 md:h-64 rounded-lg overflow-hidden">
-            <Image
-              src="/placeholder.svg"
-              alt="Shop Mother's Day gift cards"
-              fill
-              className="object-cover"
-            />
-            <div className="absolute inset-0 flex items-center p-8">
-              <h1 className="text-3xl md:text-4xl font-bold text-gray-900">
-                Shop Mother's Day<br />gift cards
-              </h1>
-            </div>
-          </div>
+          <Carousel
+            images={[
+              { src: "/placeholder.svg?text=Mother's+Day+Gift+Cards", alt: "Shop Mother's Day gift cards" },
+              { src: "/placeholder.svg?text=Birthday+Gift+Cards", alt: "Birthday Gift Cards" },
+              { src: "/placeholder.svg?text=Graduation+Gift+Cards", alt: "Graduation Gift Cards" },
+              { src: "/placeholder.svg?text=Thank+You+Gift+Cards", alt: "Thank You Gift Cards" },
+              { src: "/placeholder.svg?text=Wedding+Gift+Cards", alt: "Wedding Gift Cards" },
+              { src: "/placeholder.svg?text=Holiday+Gift+Cards", alt: "Holiday Gift Cards" },
+            ]}
+            aspectRatio="21/9"
+            className="relative h-48 md:h-64 rounded-lg overflow-hidden"
+          />
         </div>
       </div>
 
       <main className="container mx-auto py-12 px-4">
-        {/* Pagination Dots */}
-        <div className="flex justify-center mb-8">
-          <div className="flex space-x-2">
-            {[...Array(6)].map((_, i) => (
-              <div 
-                key={i} 
-                className={`w-2 h-2 rounded-full ${i === 0 ? 'bg-gray-800' : 'bg-gray-300'}`}
-              />
-            ))}
-          </div>
-        </div>
-
+        {/* Pagination Dots - No longer needed as the carousel has its own dots */}
+        
         {/* Amazon Gift Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           <div>

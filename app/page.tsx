@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
+import { Carousel } from "@/components/ui/carousel"
 
 export default function Home() {
   return (
@@ -123,16 +124,19 @@ export default function Home() {
       <main className="flex-1 bg-gray-100">
         {/* Hero Banner */}
         <div className="relative">
-          <div className="w-full h-[300px] md:h-[400px] relative overflow-hidden">
-            <Image
-              src="/placeholder.svg?height=600&width=1600"
-              alt="Hero Banner"
-              fill
-              className="object-cover"
-              priority
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-100"></div>
-          </div>
+          <Carousel 
+            images={[
+              { src: "/placeholder.svg?height=600&width=1600&text=Shop+Books", alt: "Shop Books" },
+              { src: "/placeholder.svg?height=600&width=1600&text=Electronics+Sale", alt: "Electronics Sale" },
+              { src: "/placeholder.svg?height=600&width=1600&text=Fashion+Deals", alt: "Fashion Deals" },
+              { src: "/placeholder.svg?height=600&width=1600&text=Home+Essentials", alt: "Home Essentials" },
+              { src: "/placeholder.svg?height=600&width=1600&text=Summer+Outdoor", alt: "Summer Outdoor" },
+              { src: "/placeholder.svg?height=600&width=1600&text=Back+to+School", alt: "Back to School" },
+            ]}
+            aspectRatio="21/9"
+            className="w-full h-[300px] md:h-[400px] relative overflow-hidden"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-100"></div>
         </div>
 
         {/* Product Categories */}
