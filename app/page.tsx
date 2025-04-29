@@ -127,38 +127,38 @@ export default function Home() {
           <Carousel 
             images={[
               { 
-                src: "/placeholder.svg?height=400&width=800&text=Shop+Books", 
+                src: "/placeholder.svg?height=800&width=1600&text=Shop+Books", 
                 alt: "Shop Books",
                 title: "Shop Books",
                 subtitle: "explore titles"
               },
               { 
-                src: "/placeholder.svg?height=400&width=800&text=Free+international+returns", 
+                src: "/placeholder.svg?height=800&width=1600&text=Free+international+returns", 
                 alt: "Free international returns",
                 title: "Free international returns",
                 subtitle: "on qualifying items*"
               },
               { 
-                src: "/placeholder.svg?height=400&width=800&text=Kitchen+favorites", 
+                src: "/placeholder.svg?height=800&width=1600&text=Kitchen+favorites", 
                 alt: "Kitchen favorites",
                 title: "Kitchen favorites",
                 subtitle: "under $50"
               },
               { 
-                src: "/placeholder.svg?height=400&width=800&text=New+arrivals+in+Toys", 
+                src: "/placeholder.svg?height=800&width=1600&text=New+arrivals+in+Toys", 
                 alt: "New arrivals in Toys",
                 title: "New arrivals in Toys",
                 subtitle: ""
               },
               { 
-                src: "/placeholder.svg?height=400&width=800&text=Gifts+for+Mother's+Day", 
+                src: "/placeholder.svg?height=800&width=1600&text=Gifts+for+Mother's+Day", 
                 alt: "Gifts for Mother's Day",
                 title: "Gifts for Mother's Day",
                 subtitle: ""
               },
             ]}
             aspectRatio="21/9"
-            className="w-full relative max-w-4xl mx-auto"
+            className="w-full relative max-w-6xl mx-auto"
             showOverlay={true}
           />
         </div>

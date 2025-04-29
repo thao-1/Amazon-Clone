@@ -1,6 +1,6 @@
 {
-  "/gift-cards/page": "app/gift-cards/page.js",
   "/page": "app/page.js",
-  "/sell/page": "app/sell/page.js",
-  "/todays-deals/page": "app/todays-deals/page.js"
+  "/gift-cards/page": "app/gift-cards/page.js",
+  "/todays-deals/page": "app/todays-deals/page.js",
+  "/sell/page": "app/sell/page.js"
 }
