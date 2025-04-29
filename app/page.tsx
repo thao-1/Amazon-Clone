@@ -127,31 +127,31 @@ export default function Home() {
           <Carousel 
             images={[
               { 
-                src: "/placeholder.svg?height=800&width=1600&text=Shop+Books", 
+                src: "/images/Amazon1.png", 
                 alt: "Shop Books",
                 title: "Shop Books",
                 subtitle: "explore titles"
               },
               { 
-                src: "/placeholder.svg?height=800&width=1600&text=Free+international+returns", 
+                src: "/images/Amazon2.png", 
                 alt: "Free international returns",
                 title: "Free international returns",
                 subtitle: "on qualifying items*"
               },
               { 
-                src: "/placeholder.svg?height=800&width=1600&text=Kitchen+favorites", 
+                src: "/images/Amazon3.png", 
                 alt: "Kitchen favorites",
                 title: "Kitchen favorites",
                 subtitle: "under $50"
               },
               { 
-                src: "/placeholder.svg?height=800&width=1600&text=New+arrivals+in+Toys", 
+                src: "/images/Amazon4.png", 
                 alt: "New arrivals in Toys",
                 title: "New arrivals in Toys",
                 subtitle: ""
               },
               { 
-                src: "/placeholder.svg?height=800&width=1600&text=Gifts+for+Mother's+Day", 
+                src: "/images/Amazon5.png", 
                 alt: "Gifts for Mother's Day",
                 title: "Gifts for Mother's Day",
                 subtitle: ""

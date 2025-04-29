@@ -15,37 +15,37 @@ export default function GiftCardsPage() {
           <Carousel
             images={[
               { 
-                src: "/placeholder.svg?height=800&width=1600&text=Mother's+Day+Gift+Cards&bg=pink", 
+                src: "/images/GiftCard1.png", 
                 alt: "Shop Mother's Day gift cards",
                 title: "Gifts for Mother's Day",
                 subtitle: ""
               },
               { 
-                src: "/placeholder.svg?height=800&width=1600&text=Birthday+Gift+Cards&bg=blue", 
+                src: "/images/GiftCard2.png", 
                 alt: "Birthday Gift Cards",
                 title: "Birthday Gift Cards",
                 subtitle: "for everyone on your list"
               },
               { 
-                src: "/placeholder.svg?height=800&width=1600&text=Graduation+Gift+Cards&bg=yellow", 
+                src: "/images/GiftCard3.png", 
                 alt: "Graduation Gift Cards",
                 title: "Graduation Gift Cards",
                 subtitle: "celebrate their achievement"
               },
               { 
-                src: "/placeholder.svg?height=800&width=1600&text=Thank+You+Gift+Cards&bg=green", 
+                src: "/images/GiftCard4.png", 
                 alt: "Thank You Gift Cards",
                 title: "Thank You Gift Cards",
                 subtitle: "show your appreciation"
               },
               { 
-                src: "/placeholder.svg?height=800&width=1600&text=Wedding+Gift+Cards&bg=lavender", 
+                src: "/images/GiftCard5.png", 
                 alt: "Wedding Gift Cards",
                 title: "Wedding Gift Cards",
                 subtitle: "perfect for the happy couple"
               },
               { 
-                src: "/placeholder.svg?height=800&width=1600&text=Holiday+Gift+Cards&bg=red", 
+                src: "/images/GiftCard6.png", 
                 alt: "Holiday Gift Cards",
                 title: "Holiday Gift Cards",
                 subtitle: "spread some cheer"
