@@ -127,34 +127,24 @@ export default function Home() {
           <Carousel 
             images={[
               { 
-                src: "/images/Amazon1.png", 
+                src: "/images/main/Amazon1.png", 
                 alt: "Shop Books",
-                title: "Shop Books",
-                subtitle: "explore titles"
               },
               { 
-                src: "/images/Amazon2.png", 
+                src: "/images/main/Amazon2.png", 
                 alt: "Free international returns",
-                title: "Free international returns",
-                subtitle: "on qualifying items*"
               },
               { 
-                src: "/images/Amazon3.png", 
+                src: "/images/main/Amazon3.png", 
                 alt: "Kitchen favorites",
-                title: "Kitchen favorites",
-                subtitle: "under $50"
               },
               { 
-                src: "/images/Amazon4.png", 
+                src: "/images/main/Amazon4.png", 
                 alt: "New arrivals in Toys",
-                title: "New arrivals in Toys",
-                subtitle: ""
               },
               { 
-                src: "/images/Amazon5.png", 
+                src: "/images/main/Amazon5.png", 
                 alt: "Gifts for Mother's Day",
-                title: "Gifts for Mother's Day",
-                subtitle: ""
               },
             ]}
             aspectRatio="21/9"
@@ -163,13 +153,7 @@ export default function Home() {
           />
         </div>
 
-        {/* Amazon Canada Notice */}
-        <div className="bg-white border-b py-2 px-4 text-center text-sm">
-          You are on amazon.com. You can also shop on Amazon Canada for millions of products with fast local delivery. 
-          <Link href="https://amazon.ca" className="text-[#007185] hover:text-orange-500 hover:underline">
-            Click here to go to amazon.ca
-          </Link>
-        </div>
+        
 
         {/* Product Categories */}
         <div className="container mx-auto px-4 py-6">
@@ -182,7 +166,7 @@ export default function Home() {
                   <div>
                     <div className="aspect-square relative mb-2">
                       <Image
-                        src="/placeholder.svg?text=Headset"
+                        src="/images/main/Amazon6.png"
                         alt="Headsets"
                         fill
                         className="object-contain"
@@ -193,7 +177,7 @@ export default function Home() {
                   <div>
                     <div className="aspect-square relative mb-2">
                       <Image
-                        src="/placeholder.svg?text=Keyboard"
+                        src="/images/main/Amazon7.png"
                         alt="Keyboards"
                         fill
                         className="object-contain"
@@ -204,7 +188,7 @@ export default function Home() {
                   <div>
                     <div className="aspect-square relative mb-2">
                       <Image
-                        src="/placeholder.svg?text=Mouse"
+                        src="/images/main/Amazon8.png"
                         alt="Computer mice"
                         fill
                         className="object-contain"
@@ -215,7 +199,7 @@ export default function Home() {
                   <div>
                     <div className="aspect-square relative mb-2">
                       <Image
-                        src="/placeholder.svg?text=Chair"
+                        src="/images/main/Amazon9.png"
                         alt="Chairs"
                         fill
                         className="object-contain"
@@ -238,7 +222,7 @@ export default function Home() {
                   <div>
                     <div className="aspect-square relative mb-2">
                       <Image
-                        src="/placeholder.svg?text=Jeans"
+                        src="/images/main/Amazon10.png"
                         alt="Jeans under $50"
                         fill
                         className="object-cover"
@@ -249,7 +233,7 @@ export default function Home() {
                   <div>
                     <div className="aspect-square relative mb-2">
                       <Image
-                        src="/placeholder.svg?text=Tops"
+                        src="/images/main/Amazon11.png"
                         alt="Tops under $25"
                         fill
                         className="object-cover"
@@ -260,7 +244,7 @@ export default function Home() {
                   <div>
                     <div className="aspect-square relative mb-2">
                       <Image
-                        src="/placeholder.svg?text=Dresses"
+                        src="/images/main/Amazon12.png"
                         alt="Dresses under $30"
                         fill
                         className="object-cover"
@@ -271,7 +255,7 @@ export default function Home() {
                   <div>
                     <div className="aspect-square relative mb-2">
                       <Image
-                        src="/placeholder.svg?text=Shoes"
+                        src="/images/main/Amazon13.png"
                         alt="Shoes under $50"
                         fill
                         className="object-cover"
@@ -292,7 +276,7 @@ export default function Home() {
                 <h2 className="font-bold text-lg mb-3">Get your game on</h2>
                 <div className="aspect-[4/5] relative mb-3">
                   <Image
-                    src="/placeholder.svg?text=Gaming+PC"
+                    src="/images/main/Amazon14.png"
                     alt="Gaming PC"
                     fill
                     className="object-contain"
@@ -312,7 +296,7 @@ export default function Home() {
                   <div>
                     <div className="aspect-square relative mb-2">
                       <Image
-                        src="/placeholder.svg?text=Cleaning"
+                        src="/images/main/Amazon15.png"
                         alt="Cleaning Tools"
                         fill
                         className="object-contain"
@@ -323,7 +307,7 @@ export default function Home() {
                   <div>
                     <div className="aspect-square relative mb-2">
                       <Image
-                        src="/placeholder.svg?text=Storage"
+                        src="/images/main/Amazon16.png"
                         alt="Home Storage"
                         fill
                         className="object-contain"
@@ -334,7 +318,7 @@ export default function Home() {
                   <div>
                     <div className="aspect-square relative mb-2">
                       <Image
-                        src="/placeholder.svg?text=Decor"
+                        src="/images/main/Amazon17.png"
                         alt="Home Decor"
                         fill
                         className="object-contain"
@@ -345,7 +329,7 @@ export default function Home() {
                   <div>
                     <div className="aspect-square relative mb-2">
                       <Image
-                        src="/placeholder.svg?text=Bedding"
+                        src="/images/main/Amazon18.png"
                         alt="Bedding"
                         fill
                         className="object-contain"
@@ -371,7 +355,7 @@ export default function Home() {
                 <CardContent className="p-4">
                   <div className="aspect-square relative mb-2">
                     <Image
-                      src={product.image || "/placeholder.svg"}
+                      src={product.image || "/images/main/Amazon19.png"}
                       alt={product.name}
                       fill
                       className="object-contain"
@@ -413,7 +397,7 @@ export default function Home() {
             {recommendations.map((product, index) => (
               <div key={index} className="bg-white p-2 rounded-md">
                 <div className="aspect-square relative mb-2">
-                  <Image src={product.image || "/placeholder.svg"} alt={product.name} fill className="object-contain" />
+                  <Image src={product.image || "/images/main/Amazon20.png"} alt={product.name} fill className="object-contain" />
                 </div>
                 <h3 className="text-xs line-clamp-2 h-8">{product.name}</h3>
                 <div className="flex items-center mb-1">
