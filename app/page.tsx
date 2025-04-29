@@ -85,25 +85,37 @@ export default function Home() {
         {/* Secondary Nav */}
         <div className="bg-[#232f3e] py-1">
           <div className="container mx-auto flex items-center overflow-x-auto">
-            <Button variant="ghost" className="text-white text-sm flex items-center">
-              <Menu className="h-4 w-4 mr-1" />
-              <span>All</span>
-            </Button>
-            <Button variant="ghost" className="text-white text-sm">
-              Today's Deals
-            </Button>
-            <Button variant="ghost" className="text-white text-sm">
-              Customer Service
-            </Button>
-            <Button variant="ghost" className="text-white text-sm">
-              Registry
-            </Button>
-            <Button variant="ghost" className="text-white text-sm">
-              Gift Cards
-            </Button>
-            <Button variant="ghost" className="text-white text-sm">
-              Sell
-            </Button>
+            <Link href="/all-menu">
+              <Button variant="ghost" className="text-white text-sm flex items-center">
+                <Menu className="h-4 w-4 mr-1" />
+                <span>All</span>
+              </Button>
+            </Link>
+            <Link href="/todays-deals">
+              <Button variant="ghost" className="text-white text-sm">
+                Today's Deals
+              </Button>
+            </Link>
+            <Link href="/customer-service">
+              <Button variant="ghost" className="text-white text-sm">
+                Customer Service
+              </Button>
+            </Link>
+            <Link href="/registry">
+              <Button variant="ghost" className="text-white text-sm">
+                Registry
+              </Button>
+            </Link>
+            <Link href="/gift-cards">
+              <Button variant="ghost" className="text-white text-sm">
+                Gift Cards
+              </Button>
+            </Link>
+            <Link href="/sell">
+              <Button variant="ghost" className="text-white text-sm">
+                Sell
+              </Button>
+            </Link>
           </div>
         </div>
       </header>
