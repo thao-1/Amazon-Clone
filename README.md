@@ -1,6 +1,6 @@
 # Amazon Clone
 
-![Amazon Clone](/app/webpic.png)
+![Amazon Clone](/webpic.png)
 
 ## Live Demo
 
