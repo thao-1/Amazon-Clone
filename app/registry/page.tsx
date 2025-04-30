@@ -1,34 +1,39 @@
+"use client";
+
 import Link from "next/link"
 import Image from "next/image"
 import { ChevronRight } from "lucide-react"
+import { Header } from "@/components/ui/header"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 
 export default function RegistryPage() {
   return (
-    <div className="min-h-screen bg-white">
-      {/* Header */}
-      <header className="bg-white p-4 border-b">
-        <div className="container mx-auto">
-          <div className="flex items-center space-x-4 text-sm">
-            <Link href="/" className="text-[#007185] hover:text-orange-500 hover:underline">
-              registry & gifting
-            </Link>
-            <Link href="/" className="text-[#007185] hover:text-orange-500 hover:underline">
-              Find a registry or gift list
-            </Link>
-            <Link href="/" className="text-[#007185] hover:text-orange-500 hover:underline">
-              Create a registry or gift list
-            </Link>
-            <Link href="/" className="text-[#007185] hover:text-orange-500 hover:underline">
-              Help
-            </Link>
+    <div className="min-h-screen flex flex-col bg-white">
+      <Header />
+      
+      <main className="flex-1 container mx-auto py-8 px-4">
+        {/* Header */}
+        <header className="bg-white p-4 border-b">
+          <div className="container mx-auto">
+            <div className="flex items-center space-x-4 text-sm">
+              <Link href="/" className="text-[#007185] hover:text-orange-500 hover:underline">
+                registry & gifting
+              </Link>
+              <Link href="/" className="text-[#007185] hover:text-orange-500 hover:underline">
+                Find a registry or gift list
+              </Link>
+              <Link href="/" className="text-[#007185] hover:text-orange-500 hover:underline">
+                Create a registry or gift list
+              </Link>
+              <Link href="/" className="text-[#007185] hover:text-orange-500 hover:underline">
+                Help
+              </Link>
+            </div>
           </div>
-        </div>
-      </header>
+        </header>
 
-      <main className="container mx-auto py-8 px-4">
         {/* Hero Section */}
         <div className="mb-12">
           <div className="bg-white p-6 rounded-lg shadow-sm">

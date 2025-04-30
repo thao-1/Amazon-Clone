@@ -3,7 +3,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { ChevronRight, Star, ShoppingCart } from "lucide-react"
-
+import { Header } from "@/components/ui/header"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
@@ -47,31 +47,33 @@ export default function TodaysDealsPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-100">
-      {/* Header */}
-      <header className="bg-white p-4 border-b">
-        <div className="container mx-auto">
-          <div className="flex justify-between items-center">
-            <h1 className="text-2xl font-bold">Today's Deals</h1>
-            <Link href="/cart" className="flex items-center">
-              <div className="relative">
-                <ShoppingCart className="h-6 w-6" />
-                <Badge className="absolute -top-2 -right-2 bg-orange-400 text-white">{itemCount}</Badge>
-              </div>
-              <span className="ml-2">Cart</span>
-            </Link>
+    <div className="min-h-screen flex flex-col bg-gray-100">
+      <Header />
+      
+      <main className="flex-1">
+        {/* Header */}
+        <header className="bg-white p-4 border-b">
+          <div className="container mx-auto">
+            <div className="flex justify-between items-center">
+              <h1 className="text-2xl font-bold">Today's Deals</h1>
+              <Link href="/cart" className="flex items-center">
+                <div className="relative">
+                  <ShoppingCart className="h-6 w-6" />
+                  <Badge className="absolute -top-2 -right-2 bg-orange-400 text-white">{itemCount}</Badge>
+                </div>
+                <span className="ml-2">Cart</span>
+              </Link>
+            </div>
+            <div className="flex items-center text-sm mt-2">
+              <Link href="/" className="text-[#007185] hover:text-orange-500 hover:underline">
+                Home
+              </Link>
+              <ChevronRight className="h-3 w-3 mx-2 text-gray-400" />
+              <span>Today's Deals</span>
+            </div>
           </div>
-          <div className="flex items-center text-sm mt-2">
-            <Link href="/" className="text-[#007185] hover:text-orange-500 hover:underline">
-              Home
-            </Link>
-            <ChevronRight className="h-3 w-3 mx-2 text-gray-400" />
-            <span>Today's Deals</span>
-          </div>
-        </div>
-      </header>
+        </header>
 
-      <main className="container mx-auto py-6 px-4">
         {/* Categories */}
         <div className="mb-8 overflow-x-auto">
           <div className="flex space-x-2 pb-2">

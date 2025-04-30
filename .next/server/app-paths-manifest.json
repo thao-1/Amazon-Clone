@@ -1,3 +1,9 @@
 {
-  "/sell/page": "app/sell/page.js"
+  "/page": "app/page.js",
+  "/todays-deals/page": "app/todays-deals/page.js",
+  "/customer-service/page": "app/customer-service/page.js",
+  "/registry/page": "app/registry/page.js",
+  "/gift-cards/page": "app/gift-cards/page.js",
+  "/sell/page": "app/sell/page.js",
+  "/cart/page": "app/cart/page.js"
 }

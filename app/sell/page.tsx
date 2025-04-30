@@ -1,31 +1,16 @@
+"use client";
+
 import Link from "next/link"
 import Image from "next/image"
-
+import { Header } from "@/components/ui/header"
 import { Button } from "@/components/ui/button"
 
 export default function SellPage() {
   return (
-    <div className="min-h-screen bg-white">
-      {/* Header */}
-      <header className="bg-white p-4 border-b">
-        <div className="container mx-auto flex justify-between items-center">
-          <h1 className="text-2xl font-bold">Sell with Amazon</h1>
-          <div className="flex items-center space-x-2">
-            <div className="text-sm text-green-700 flex items-center">
-              <div className="w-3 h-3 bg-green-700 rounded-full mr-1"></div>
-              <span>Get 10% back on your first $10,000 in branded sales.</span>
-              <Link href="/" className="text-[#007185] hover:text-orange-500 hover:underline ml-1">
-                Learn more
-              </Link>
-            </div>
-            <Button className="bg-orange-400 hover:bg-orange-500 text-black rounded-full px-6">
-              Sign up
-            </Button>
-          </div>
-        </div>
-      </header>
+    <div className="min-h-screen flex flex-col">
+      <Header />
 
-      <main>
+      <main className="flex-1">
         {/* Hero Section */}
         <section className="bg-white py-12">
           <div className="container mx-auto px-4">
