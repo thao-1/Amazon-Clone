@@ -7,7 +7,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 interface CarouselProps {
   images: {
     src: string
-    alt: string
+    alt?: string
     title?: string
     subtitle?: string
   }[]
@@ -50,7 +50,7 @@ export function Carousel({
       >
         <Image
           src={images[currentIndex].src}
-          alt={images[currentIndex].alt}
+          alt={images[currentIndex].alt || "Carousel image"}
           fill
           className={`transition-opacity duration-300 object-${objectFit}`}
           priority
