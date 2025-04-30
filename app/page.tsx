@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link"
 import Image from "next/image"
 import { Search, ShoppingCart, Menu, ChevronDown, Star } from "lucide-react"
@@ -7,8 +9,11 @@ import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 import { Carousel } from "@/components/ui/carousel"
+import { useCart } from "@/lib/cart-context"
 
 export default function Home() {
+  const { addToCart, itemCount } = useCart()
+
   return (
     <div className="min-h-screen flex flex-col">
       {/* Navigation Bar */}
@@ -70,7 +75,7 @@ export default function Home() {
               <Link href="/cart" className="flex items-center">
                 <div className="relative">
                   <ShoppingCart className="h-7 w-7" />
-                  <Badge className="absolute -top-2 -right-2 bg-orange-400 text-white">0</Badge>
+                  <Badge className="absolute -top-2 -right-2 bg-orange-400 text-white">{itemCount}</Badge>
                 </div>
                 <span className="hidden md:inline font-bold ml-1">Cart</span>
               </Link>
@@ -347,45 +352,11 @@ export default function Home() {
         </div>
 
         {/* Featured Products */}
-        <div className="container mx-auto px-4 mb-8">
+        <div className="container mx-auto px-4 py-8">
           <h2 className="text-2xl font-bold mb-4">Today's Deals</h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {products.map((product, index) => (
-              <Card key={index} className="bg-white shadow-sm hover:shadow-md transition-shadow">
-                <CardContent className="p-4">
-                  <div className="aspect-square relative mb-2">
-                    <Image
-                      src={product.image || "/images/main/Amazon19.png"}
-                      alt={product.name}
-                      fill
-                      className="object-contain"
-                    />
-                  </div>
-                  <div className="mb-1">
-                    <Badge variant="outline" className="bg-red-100 text-red-800 border-red-200">
-                      Up to {product.discount}% off
-                    </Badge>
-                  </div>
-                  <div className="flex items-center mb-1">
-                    <div className="flex text-yellow-400">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className={`h-3 w-3 ${i < product.rating ? "fill-current" : ""}`} />
-                      ))}
-                    </div>
-                    <span className="text-xs text-gray-500 ml-1">({product.reviews})</span>
-                  </div>
-                  <h3 className="text-sm line-clamp-2 h-10">{product.name}</h3>
-                  <div className="flex items-baseline mt-1">
-                    <span className="text-lg font-bold">${product.price.toFixed(2)}</span>
-                    {product.originalPrice && (
-                      <span className="text-sm text-gray-500 line-through ml-2">
-                        ${product.originalPrice.toFixed(2)}
-                      </span>
-                    )}
-                  </div>
-                  <Button className="w-full mt-2 bg-yellow-400 hover:bg-yellow-500 text-black">Add to Cart</Button>
-                </CardContent>
-              </Card>
+              <ProductCard key={index} product={product} />
             ))}
           </div>
         </div>
@@ -395,21 +366,7 @@ export default function Home() {
           <h2 className="text-2xl font-bold mb-4">Recommended for you</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
             {recommendations.map((product, index) => (
-              <div key={index} className="bg-white p-2 rounded-md">
-                <div className="aspect-square relative mb-2">
-                  <Image src={product.image || "/images/main/Amazon20.png"} alt={product.name} fill className="object-contain" />
-                </div>
-                <h3 className="text-xs line-clamp-2 h-8">{product.name}</h3>
-                <div className="flex items-center mb-1">
-                  <div className="flex text-yellow-400">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className={`h-3 w-3 ${i < product.rating ? "fill-current" : ""}`} />
-                    ))}
-                  </div>
-                  <span className="text-xs text-gray-500 ml-1">({product.reviews})</span>
-                </div>
-                <div className="text-sm font-bold">${product.price.toFixed(2)}</div>
-              </div>
+              <RecommendationCard key={index} product={product} />
             ))}
           </div>
         </div>
@@ -541,6 +498,75 @@ export default function Home() {
           </div>
         </div>
       </footer>
+    </div>
+  )
+}
+
+const ProductCard = ({ product }) => {
+  const { addToCart } = useCart()
+
+  return (
+    <Card className="bg-white shadow-sm hover:shadow-md transition-shadow">
+      <CardContent className="p-4">
+        <div className="aspect-square relative mb-2">
+          <Image
+            src={product.image || "/images/main/Amazon19.png"}
+            alt={product.name}
+            fill
+            className="object-contain"
+          />
+        </div>
+        <div className="mb-1">
+          <Badge variant="outline" className="bg-red-100 text-red-800 border-red-200">
+            Up to {product.discount}% off
+          </Badge>
+        </div>
+        <div className="flex items-center mb-1">
+          <div className="flex text-yellow-400">
+            {[...Array(5)].map((_, i) => (
+              <Star key={i} className={`h-3 w-3 ${i < product.rating ? "fill-current" : ""}`} />
+            ))}
+          </div>
+          <span className="text-xs text-gray-500 ml-1">({product.reviews})</span>
+        </div>
+        <h3 className="text-sm line-clamp-2 h-10">{product.name}</h3>
+        <div className="flex items-baseline mt-1">
+          <span className="text-lg font-bold">${product.price.toFixed(2)}</span>
+          {product.originalPrice && (
+            <span className="text-sm text-gray-500 line-through ml-2">
+              ${product.originalPrice.toFixed(2)}
+            </span>
+          )}
+        </div>
+        <Button className="w-full mt-2 bg-yellow-400 hover:bg-yellow-500 text-black" onClick={() => addToCart(product)}>
+          Add to Cart
+        </Button>
+      </CardContent>
+    </Card>
+  )
+}
+
+const RecommendationCard = ({ product }) => {
+  const { addToCart } = useCart()
+
+  return (
+    <div className="bg-white p-2 rounded-md">
+      <div className="aspect-square relative mb-2">
+        <Image src={product.image || "/images/main/Amazon20.png"} alt={product.name} fill className="object-contain" />
+      </div>
+      <h3 className="text-xs line-clamp-2 h-8">{product.name}</h3>
+      <div className="flex items-center mb-1">
+        <div className="flex text-yellow-400">
+          {[...Array(5)].map((_, i) => (
+            <Star key={i} className={`h-3 w-3 ${i < product.rating ? "fill-current" : ""}`} />
+          ))}
+        </div>
+        <span className="text-xs text-gray-500 ml-1">({product.reviews})</span>
+      </div>
+      <div className="text-sm font-bold">${product.price.toFixed(2)}</div>
+      <Button className="w-full mt-2 bg-yellow-400 hover:bg-yellow-500 text-black" onClick={() => addToCart(product)}>
+        Add to Cart
+      </Button>
     </div>
   )
 }
