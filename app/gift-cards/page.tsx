@@ -10,63 +10,41 @@ export default function GiftCardsPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Banner */}
-      <div className="w-full bg-pink-100 py-8">
+      <div className="w-full bg-pink-100 py-12">
         <div className="container mx-auto px-4">
           <Carousel
             images={[
               { 
-                src: "/images/gift-cards/GiftCard1.png", 
-                alt: "Shop Mother's Day gift cards",
-                title: "Gifts for Mother's Day",
-                subtitle: ""
+                src: "/images/gift-cards/GiftCard1.png",
               },
               { 
                 src: "/images/gift-cards/GiftCard2.png", 
-                alt: "Birthday Gift Cards",
-                title: "Birthday Gift Cards",
-                subtitle: "for everyone on your list"
               },
               { 
                 src: "/images/gift-cards/GiftCard3.png", 
-                alt: "Graduation Gift Cards",
-                title: "Graduation Gift Cards",
-                subtitle: "celebrate their achievement"
               },
               { 
                 src: "/images/gift-cards/GiftCard4.png", 
-                alt: "Thank You Gift Cards",
-                title: "Thank You Gift Cards",
-                subtitle: "show your appreciation"
+                
               },
               { 
                 src: "/images/gift-cards/GiftCard5.png", 
-                alt: "Wedding Gift Cards",
-                title: "Wedding Gift Cards",
-                subtitle: "perfect for the happy couple"
+                
               },
               { 
                 src: "/images/gift-cards/GiftCard6.png", 
-                alt: "Holiday Gift Cards",
-                title: "Holiday Gift Cards",
-                subtitle: "spread some cheer"
+                
               },
             ]}
-            aspectRatio="21/9"
-            className="relative h-64 md:h-96 rounded-lg overflow-hidden max-w-6xl mx-auto"
-            showOverlay={true}
+            aspectRatio="16/9"
+            className="relative h-80 md:h-[500px] rounded-lg overflow-hidden max-w-7xl mx-auto"
+            objectFit="contain"
+            showOverlay={false}
           />
         </div>
       </div>
-
-      <main className="container mx-auto py-12 px-4">
-        {/* Amazon Canada Notice */}
-        <div className="bg-white border-b border-t py-2 px-4 text-center text-sm mb-8">
-          You are on amazon.com. You can also shop on Amazon Canada for millions of products with fast local delivery. 
-          <Link href="https://amazon.ca" className="text-[#007185] hover:text-orange-500 hover:underline ml-1">
-            Click here to go to amazon.ca
-          </Link>
-        </div>
-        
+      
+      <main className="container mx-auto py-12 px-4">  
         {/* Amazon Gift Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           <div>
@@ -78,7 +56,7 @@ export default function GiftCardsPage() {
               <div className="bg-white p-4 rounded-md shadow-sm">
                 <div className="aspect-square relative mb-2">
                   <Image
-                    src="/placeholder.svg?text=Heart+Pattern"
+                    src="/images/gift-cards/GiftCard7.png"
                     alt="Heart Pattern Gift Card"
                     fill
                     className="object-contain"
@@ -88,7 +66,7 @@ export default function GiftCardsPage() {
               <div className="bg-white p-4 rounded-md shadow-sm">
                 <div className="aspect-square relative mb-2">
                   <Image
-                    src="/placeholder.svg?text=Floral"
+                    src="/images/gift-cards/GiftCard8.png"
                     alt="Floral Gift Card"
                     fill
                     className="object-contain"
@@ -98,27 +76,37 @@ export default function GiftCardsPage() {
               <div className="bg-white p-4 rounded-md shadow-sm">
                 <div className="aspect-square relative mb-2">
                   <Image
-                    src="/placeholder.svg?text=Amazon"
+                    src="/images/gift-cards/GiftCard9.png"
                     alt="Amazon Gift Card"
                     fill
                     className="object-contain"
                   />
                 </div>
               </div>
+              <div className="bg-white p-4 rounded-md shadow-sm">
+                <div className="aspect-square relative mb-2">
+                  <Image
+                    src="/images/gift-cards/GiftCard10.png"
+                    alt="Birthday Gift Card"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+              </div>
             </div>
           </div>
-
+          
           <div>
-            <h2 className="text-2xl font-bold mb-2">Specialty Gift Cards</h2>
+            <h2 className="text-2xl font-bold mb-2">eGift Cards</h2>
             <Link href="/" className="text-[#007185] hover:text-orange-500 hover:underline text-sm">
               Shop now
             </Link>
-            <div className="grid grid-cols-3 gap-4 mt-4">
+            <div className="grid grid-cols-2 gap-4 mt-4">
               <div className="bg-white p-4 rounded-md shadow-sm">
                 <div className="aspect-square relative mb-2">
                   <Image
-                    src="/placeholder.svg?text=Starbucks"
-                    alt="Starbucks Gift Card"
+                    src="/images/gift-cards/GiftCard11.png"
+                    alt="Email Gift Card"
                     fill
                     className="object-contain"
                   />
@@ -127,8 +115,8 @@ export default function GiftCardsPage() {
               <div className="bg-white p-4 rounded-md shadow-sm">
                 <div className="aspect-square relative mb-2">
                   <Image
-                    src="/placeholder.svg?text=Uber"
-                    alt="Uber Gift Card"
+                    src="/images/gift-cards/GiftCard12.png"
+                    alt="Print at Home Gift Card"
                     fill
                     className="object-contain"
                   />
@@ -137,8 +125,8 @@ export default function GiftCardsPage() {
               <div className="bg-white p-4 rounded-md shadow-sm">
                 <div className="aspect-square relative mb-2">
                   <Image
-                    src="/placeholder.svg?text=Visa"
-                    alt="Visa Gift Card"
+                    src="/images/gift-cards/GiftCard13.png"
+                    alt="Text Message Gift Card"
                     fill
                     className="object-contain"
                   />
@@ -147,18 +135,8 @@ export default function GiftCardsPage() {
               <div className="bg-white p-4 rounded-md shadow-sm">
                 <div className="aspect-square relative mb-2">
                   <Image
-                    src="/placeholder.svg?text=Ulta"
-                    alt="Ulta Gift Card"
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-              </div>
-              <div className="bg-white p-4 rounded-md shadow-sm">
-                <div className="aspect-square relative mb-2">
-                  <Image
-                    src="/placeholder.svg?text=Apple"
-                    alt="Apple Gift Card"
+                    src="/images/gift-cards/GiftCard14.png"
+                    alt="Animated Gift Card"
                     fill
                     className="object-contain"
                   />
@@ -167,44 +145,66 @@ export default function GiftCardsPage() {
             </div>
           </div>
         </div>
-
-        {/* Amazon Reload and Bulk Gift Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <Card className="overflow-hidden border-0 shadow-sm">
-            <CardContent className="p-0">
-              <div className="p-6">
-                <h2 className="text-2xl font-bold mb-2">Amazon Reload</h2>
-                <p className="text-sm mb-4">Add funds directly to your Amazon Gift Card balance</p>
-                <div className="aspect-video relative">
+        
+        {/* Gift Cards by Occasion */}
+        <div className="mb-12">
+          <h2 className="text-2xl font-bold mb-6">Gift Cards by Occasion</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <Card>
+              <CardContent className="p-4">
+                <div className="aspect-square relative mb-2">
                   <Image
-                    src="/placeholder.svg?text=Amazon+Reload"
-                    alt="Amazon Reload"
+                    src="/images/gift-cards/GiftCard15.png"
+                    alt="Birthday Gift Cards"
                     fill
                     className="object-contain"
                   />
                 </div>
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card className="overflow-hidden border-0 shadow-sm">
-            <CardContent className="p-0">
-              <div className="p-6">
-                <h2 className="text-2xl font-bold mb-2">Amazon Gift Cards in Bulk</h2>
-                <p className="text-sm mb-4">Order more than $10,000 at once or integrate with Amazon Gift Cards API</p>
-                <div className="aspect-video relative">
+                <h3 className="font-medium text-center">Birthday</h3>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardContent className="p-4">
+                <div className="aspect-square relative mb-2">
                   <Image
-                    src="/placeholder.svg?text=Bulk+Gift+Cards"
-                    alt="Amazon Gift Cards in Bulk"
+                    src="/images/gift-cards/GiftCard16.png"
+                    alt="Thank You Gift Cards"
                     fill
                     className="object-contain"
                   />
                 </div>
-              </div>
-            </CardContent>
-          </Card>
+                <h3 className="font-medium text-center">Thank You</h3>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardContent className="p-4">
+                <div className="aspect-square relative mb-2">
+                  <Image
+                    src="/images/gift-cards/GiftCard17.png"
+                    alt="Congratulations Gift Cards"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                <h3 className="font-medium text-center">Congratulations</h3>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardContent className="p-4">
+                <div className="aspect-square relative mb-2">
+                  <Image
+                    src="/images/gift-cards/GiftCard18.png"
+                    alt="Wedding Gift Cards"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                <h3 className="font-medium text-center">Wedding</h3>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </main>
     </div>
-  );
+  )
 }

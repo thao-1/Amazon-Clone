@@ -37,7 +37,7 @@ export default function CustomerServicePage() {
           <div className="bg-white rounded-md p-4 text-black hover:shadow-lg transition-shadow">
             <div className="flex items-start space-x-4">
               <div className="w-12 h-12 bg-[#f7f7f7] rounded-md flex items-center justify-center">
-                <Image src="/placeholder.svg" alt="Delivery" width={32} height={32} />
+                <Image src="/images/customerservice/Delivery1.png" alt="Delivery" width={32} height={32} />
               </div>
               <div>
                 <h2 className="font-medium">A delivery, order or return</h2>
@@ -49,7 +49,7 @@ export default function CustomerServicePage() {
           <div className="bg-white rounded-md p-4 text-black hover:shadow-lg transition-shadow">
             <div className="flex items-start space-x-4">
               <div className="w-12 h-12 bg-[#f7f7f7] rounded-md flex items-center justify-center">
-                <Image src="/placeholder.svg" alt="Prime" width={32} height={32} />
+                <Image src="/images/customerservice/Delivery2.png" alt="Prime" width={32} height={32} />
               </div>
               <div>
                 <h2 className="font-medium">Prime</h2>
@@ -61,7 +61,7 @@ export default function CustomerServicePage() {
           <div className="bg-white rounded-md p-4 text-black hover:shadow-lg transition-shadow">
             <div className="flex items-start space-x-4">
               <div className="w-12 h-12 bg-[#f7f7f7] rounded-md flex items-center justify-center">
-                <Image src="/placeholder.svg" alt="Devices" width={32} height={32} />
+                <Image src="/images/customerservice/Delivery3.png" alt="Devices" width={32} height={32} />
               </div>
               <div>
                 <h2 className="font-medium">Kindle, Fire, Alexa, or other Amazon devices</h2>
@@ -73,7 +73,7 @@ export default function CustomerServicePage() {
           <div className="bg-white rounded-md p-4 text-black hover:shadow-lg transition-shadow">
             <div className="flex items-start space-x-4">
               <div className="w-12 h-12 bg-[#f7f7f7] rounded-md flex items-center justify-center">
-                <Image src="/placeholder.svg" alt="Digital Content" width={32} height={32} />
+                <Image src="/images/customerservice/Delivery4.png" alt="Digital Content" width={32} height={32} />
               </div>
               <div>
                 <h2 className="font-medium">eBooks, Prime Videos, Music, or Games</h2>
@@ -85,7 +85,7 @@ export default function CustomerServicePage() {
           <div className="bg-white rounded-md p-4 text-black hover:shadow-lg transition-shadow">
             <div className="flex items-start space-x-4">
               <div className="w-12 h-12 bg-[#f7f7f7] rounded-md flex items-center justify-center">
-                <Image src="/placeholder.svg" alt="Payments" width={32} height={32} />
+                <Image src="/images/customerservice/Delivery5.png" alt="Payments" width={32} height={32} />
               </div>
               <div>
                 <h2 className="font-medium">Payment, charges or gift cards</h2>
@@ -97,7 +97,7 @@ export default function CustomerServicePage() {
           <div className="bg-white rounded-md p-4 text-black hover:shadow-lg transition-shadow">
             <div className="flex items-start space-x-4">
               <div className="w-12 h-12 bg-[#f7f7f7] rounded-md flex items-center justify-center">
-                <Image src="/placeholder.svg" alt="Security" width={32} height={32} />
+                <Image src="/images/customerservice/Delivery6.png" alt="Security" width={32} height={32} />
               </div>
               <div>
                 <h2 className="font-medium">Address, security & privacy</h2>

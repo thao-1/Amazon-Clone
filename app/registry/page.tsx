@@ -55,7 +55,7 @@ export default function RegistryPage() {
                     <CardContent className="p-0">
                       <div className="aspect-[4/3] relative">
                         <Image 
-                          src="/placeholder.svg" 
+                          src="/images/registry/Baby1.png" 
                           alt="Baby Registry" 
                           fill 
                           className="object-cover"
@@ -73,7 +73,7 @@ export default function RegistryPage() {
                     <CardContent className="p-0">
                       <div className="aspect-[4/3] relative">
                         <Image 
-                          src="/placeholder.svg" 
+                          src="/images/registry/Wedding1.png" 
                           alt="Wedding Registry" 
                           fill 
                           className="object-cover"
@@ -91,7 +91,7 @@ export default function RegistryPage() {
                     <CardContent className="p-0">
                       <div className="aspect-[4/3] relative">
                         <Image 
-                          src="/placeholder.svg" 
+                          src="/images/registry/Gift1.png" 
                           alt="Gift List" 
                           fill 
                           className="object-cover"
@@ -118,7 +118,7 @@ export default function RegistryPage() {
               <CardContent className="p-6">
                 <div className="flex justify-center mb-4">
                   <div className="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center">
-                    <Image src="/placeholder.svg" alt="Selection" width={32} height={32} />
+                    <Image src="/images/registry/Selection.png" alt="Selection" width={32} height={32} />
                   </div>
                 </div>
                 <h3 className="font-bold text-center mb-2">Earth's biggest selection</h3>
@@ -131,7 +131,7 @@ export default function RegistryPage() {
               <CardContent className="p-6">
                 <div className="flex justify-center mb-4">
                   <div className="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center">
-                    <Image src="/placeholder.svg" alt="Easy to share" width={32} height={32} />
+                    <Image src="/images/registry/Easy.png" alt="Easy to share" width={32} height={32} />
                   </div>
                 </div>
                 <h3 className="font-bold text-center mb-2">Easy to share</h3>
@@ -144,7 +144,7 @@ export default function RegistryPage() {
               <CardContent className="p-6">
                 <div className="flex justify-center mb-4">
                   <div className="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center">
-                    <Image src="/placeholder.svg" alt="Extended returns" width={32} height={32} />
+                    <Image src="/images/registry/Extended.png" alt="Extended returns" width={32} height={32} />
                   </div>
                 </div>
                 <h3 className="font-bold text-center mb-2">Extended returns</h3>
@@ -168,7 +168,7 @@ export default function RegistryPage() {
               <CardContent className="p-0">
                 <div className="aspect-square relative">
                   <Image 
-                    src="/placeholder.svg" 
+                    src="/images/registry/Baby1.png" 
                     alt="Baby" 
                     fill 
                     className="object-cover"
@@ -186,7 +186,7 @@ export default function RegistryPage() {
               <CardContent className="p-0">
                 <div className="aspect-square relative">
                   <Image 
-                    src="/placeholder.svg" 
+                    src="/images/registry/Wedding1.png" 
                     alt="Wedding" 
                     fill 
                     className="object-cover"
@@ -204,7 +204,7 @@ export default function RegistryPage() {
               <CardContent className="p-0">
                 <div className="aspect-square relative">
                   <Image 
-                    src="/placeholder.svg" 
+                    src="/images/registry/Birthday1.png" 
                     alt="Birthday" 
                     fill 
                     className="object-cover"
@@ -222,7 +222,7 @@ export default function RegistryPage() {
               <CardContent className="p-0">
                 <div className="aspect-square relative">
                   <Image 
-                    src="/placeholder.svg" 
+                    src="/images/registry/Holiday1.png" 
                     alt="Holiday" 
                     fill 
                     className="object-cover"
