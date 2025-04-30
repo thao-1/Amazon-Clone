@@ -46,7 +46,7 @@ export default function SellPage() {
               <div className="md:w-1/2">
                 <div className="relative h-64 md:h-80">
                   <Image
-                    src="/placeholder.svg"
+                    src="/sell/sell1.png"
                     alt="Amazon Seller Account"
                     fill
                     className="object-contain"
