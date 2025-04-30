@@ -10,9 +10,22 @@ type CartItem = {
   quantity: number;
 };
 
+type Product = {
+  id: string;
+  title?: string;
+  name?: string;
+  price: number;
+  image?: string;
+  src?: string;
+  alt?: string;
+  originalPrice?: number;
+  discountPrice?: number;
+  dealPrice?: number;
+};
+
 type CartContextType = {
   items: CartItem[];
-  addToCart: (item: any) => void;
+  addToCart: (item: Product) => void;
   removeItem: (id: string) => void;
   updateQuantity: (id: string, quantity: number) => void;
   clearCart: () => void;
@@ -46,16 +59,16 @@ export function CartProvider({ children }: { children: ReactNode }) {
     }
   }, [items]);
 
-  const addToCart = (product: any) => {
+  const addToCart = (product: Product) => {
     setItems((prevItems) => {
       // Generate a unique ID if one doesn't exist
       const id = product.id || `product-${Date.now()}`;
       
-      // Check if item already exists in cart
+      // Check if the item already exists in the cart
       const existingItemIndex = prevItems.findIndex((item) => item.id === id);
       
       if (existingItemIndex >= 0) {
-        // Item exists, increase quantity
+        // Item exists, increment quantity
         const updatedItems = [...prevItems];
         updatedItems[existingItemIndex].quantity += 1;
         return updatedItems;
@@ -63,9 +76,9 @@ export function CartProvider({ children }: { children: ReactNode }) {
         // Item doesn't exist, add new item with quantity 1
         return [...prevItems, { 
           id, 
-          name: product.name, 
+          name: product.name || product.title || "Product", // Ensure name is always a string
           price: product.price, 
-          image: product.image || "/images/main/Amazon19.png",
+          image: product.image || product.src || "/images/main/Amazon19.png",
           quantity: 1 
         }];
       }

@@ -9,11 +9,22 @@ import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 import { useCart } from "@/lib/cart-context"
 
+type Product = {
+  id: string;
+  name: string;
+  price: number;
+  image?: string;
+  originalPrice?: number;
+  discount?: number;
+  rating?: number;
+  reviews?: number;
+};
+
 export default function TodaysDealsPage() {
   const { addToCart, itemCount } = useCart();
 
   // Sample product data
-  const products = [
+  const products: Product[] = [
     {
       id: "laptop-1",
       name: "ASUS TUF Gaming A16 (2024) Gaming Laptop, 16\"",
@@ -174,34 +185,41 @@ export default function TodaysDealsPage() {
           <div className="flex-1">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {products.map((product) => (
-                <Card key={product.id} className="overflow-hidden">
-                  <CardContent className="p-3">
-                    <div className="aspect-square relative mb-3">
-                      <Image
-                        src={product.image}
-                        alt={product.name}
-                        fill
-                        className="object-contain"
+                <Card key={product.id} className="bg-white overflow-hidden">
+                  <CardContent className="p-4">
+                    <div className="aspect-square relative mb-4">
+                      <Image 
+                        src={product.image || "/images/main/Amazon19.png"} 
+                        alt={product.name} 
+                        fill 
+                        className="object-contain" 
                       />
                     </div>
-                    <Badge className="bg-red-600 text-white mb-2">{product.discount}% off</Badge>
-                    <p className="text-xs text-gray-500 mb-1">Limited time deal</p>
-                    <h3 className="text-sm font-medium line-clamp-2">{product.name}</h3>
-                    <div className="flex items-center mt-1 mb-1">
+                    <div className="mb-2">
+                      <Badge className="bg-red-600 text-white">
+                        {product.discount || 0}% OFF
+                      </Badge>
+                    </div>
+                    <h3 className="text-sm font-medium line-clamp-2 mb-1">{product.name}</h3>
+                    <div className="flex items-center mb-1">
                       <div className="flex text-yellow-400">
                         {[...Array(5)].map((_, i) => (
-                          <Star key={i} className={`h-3 w-3 ${i < product.rating ? "fill-current" : ""}`} />
+                          <Star key={i} className={`h-3 w-3 ${i < (product.rating || 0) ? "fill-current" : ""}`} />
                         ))}
                       </div>
-                      <span className="text-xs text-gray-500 ml-1">({product.reviews})</span>
+                      <span className="text-xs text-gray-500 ml-1">({product.reviews || 0})</span>
                     </div>
-                    <div className="flex items-baseline mb-2">
+                    <div className="flex items-baseline">
                       <span className="text-lg font-bold">${product.price.toFixed(2)}</span>
-                      <span className="text-sm text-gray-500 line-through ml-2">${product.originalPrice.toFixed(2)}</span>
+                      {product.originalPrice && (
+                        <span className="text-sm text-gray-500 line-through ml-2">
+                          ${product.originalPrice.toFixed(2)}
+                        </span>
+                      )}
                     </div>
                     <Button 
-                      className="w-full bg-yellow-400 hover:bg-yellow-500 text-black"
                       onClick={() => addToCart(product)}
+                      className="w-full mt-2 bg-yellow-400 hover:bg-yellow-500 text-black"
                     >
                       Add to Cart
                     </Button>

@@ -502,7 +502,18 @@ export default function Home() {
   )
 }
 
-const ProductCard = ({ product }) => {
+type Product = {
+  id: string;
+  name: string;
+  price: number;
+  image?: string;
+  originalPrice?: number;
+  discount?: number;
+  rating?: number;
+  reviews?: number;
+};
+
+const ProductCard = ({ product }: { product: Product }) => {
   const { addToCart } = useCart()
 
   return (
@@ -518,16 +529,16 @@ const ProductCard = ({ product }) => {
         </div>
         <div className="mb-1">
           <Badge variant="outline" className="bg-red-100 text-red-800 border-red-200">
-            Up to {product.discount}% off
+            Up to {product.discount || 0}% off
           </Badge>
         </div>
         <div className="flex items-center mb-1">
           <div className="flex text-yellow-400">
             {[...Array(5)].map((_, i) => (
-              <Star key={i} className={`h-3 w-3 ${i < product.rating ? "fill-current" : ""}`} />
+              <Star key={i} className={`h-3 w-3 ${i < (product.rating || 0) ? "fill-current" : ""}`} />
             ))}
           </div>
-          <span className="text-xs text-gray-500 ml-1">({product.reviews})</span>
+          <span className="text-xs text-gray-500 ml-1">({product.reviews || 0})</span>
         </div>
         <h3 className="text-sm line-clamp-2 h-10">{product.name}</h3>
         <div className="flex items-baseline mt-1">
@@ -546,33 +557,36 @@ const ProductCard = ({ product }) => {
   )
 }
 
-const RecommendationCard = ({ product }) => {
+const RecommendationCard = ({ product }: { product: Product }) => {
   const { addToCart } = useCart()
 
   return (
-    <div className="bg-white p-2 rounded-md">
-      <div className="aspect-square relative mb-2">
+    <div className="flex items-center space-x-2 p-2 hover:bg-gray-50 rounded-md">
+      <div className="aspect-square relative w-16">
         <Image src={product.image || "/images/main/Amazon20.png"} alt={product.name} fill className="object-contain" />
       </div>
-      <h3 className="text-xs line-clamp-2 h-8">{product.name}</h3>
-      <div className="flex items-center mb-1">
-        <div className="flex text-yellow-400">
-          {[...Array(5)].map((_, i) => (
-            <Star key={i} className={`h-3 w-3 ${i < product.rating ? "fill-current" : ""}`} />
-          ))}
+      <div className="flex-1">
+        <h3 className="text-xs line-clamp-2 h-8">{product.name}</h3>
+        <div className="flex items-center mb-1">
+          <div className="flex text-yellow-400">
+            {[...Array(5)].map((_, i) => (
+              <Star key={i} className={`h-3 w-3 ${i < (product.rating || 0) ? "fill-current" : ""}`} />
+            ))}
+          </div>
+          <span className="text-xs text-gray-500 ml-1">({product.reviews || 0})</span>
         </div>
-        <span className="text-xs text-gray-500 ml-1">({product.reviews})</span>
+        <div className="text-sm font-bold">${product.price.toFixed(2)}</div>
+        <Button className="w-full mt-2 bg-yellow-400 hover:bg-yellow-500 text-black" onClick={() => addToCart(product)}>
+          Add to Cart
+        </Button>
       </div>
-      <div className="text-sm font-bold">${product.price.toFixed(2)}</div>
-      <Button className="w-full mt-2 bg-yellow-400 hover:bg-yellow-500 text-black" onClick={() => addToCart(product)}>
-        Add to Cart
-      </Button>
     </div>
   )
 }
 
 const products = [
   {
+    id: "1",
     name: "Wireless Noise Cancelling Headphones with 30-Hour Battery Life",
     price: 149.99,
     originalPrice: 249.99,
@@ -582,6 +596,7 @@ const products = [
     image: "/images/main/Amazon22.png",
   },
   {
+    id: "2",
     name: "Smart Watch with Heart Rate Monitor and GPS",
     price: 199.99,
     originalPrice: 299.99,
@@ -591,6 +606,7 @@ const products = [
     image: "/images/main/Amazon23.png",
   },
   {
+    id: "3",
     name: "Robot Vacuum Cleaner with Mapping Technology",
     price: 299.99,
     originalPrice: 499.99,
@@ -600,6 +616,7 @@ const products = [
     image: "/images/main/Amazon24.png",
   },
   {
+    id: "4",
     name: "4K Ultra HD Smart LED TV, 55 Inch",
     price: 429.99,
     originalPrice: 599.99,
@@ -609,6 +626,7 @@ const products = [
     image: "/images/main/Amazon25.png",
   },
   {
+    id: "5",
     name: "Portable Bluetooth Speaker with 24-Hour Playtime",
     price: 79.99,
     originalPrice: 129.99,
@@ -621,6 +639,7 @@ const products = [
 
 const recommendations = [
   {
+    id: "6",
     name: "Wireless Earbuds with Charging Case",
     price: 59.99,
     rating: 4,
@@ -628,6 +647,7 @@ const recommendations = [
     image: "/images/main/Amazon27.png",
   },
   {
+    id: "7",
     name: "Stainless Steel Water Bottle, 24oz",
     price: 24.99,
     rating: 5,
@@ -635,6 +655,7 @@ const recommendations = [
     image: "/images/main/Amazon28.png",
   },
   {
+    id: "8",
     name: "Ergonomic Office Chair with Lumbar Support",
     price: 149.99,
     rating: 4,
@@ -642,6 +663,7 @@ const recommendations = [
     image: "/images/main/Amazon29.png",
   },
   {
+    id: "9",
     name: "Wireless Charging Pad for iPhone and Android",
     price: 29.99,
     rating: 4,
@@ -649,6 +671,7 @@ const recommendations = [
     image: "/images/main/Amazon30.png",
   },
   {
+    id: "10",
     name: "Smart Home Security Camera with Night Vision",
     price: 89.99,
     rating: 4,
@@ -656,6 +679,7 @@ const recommendations = [
     image: "/images/main/Amazon31.png",
   },
   {
+    id: "11",
     name: "Non-Stick Cookware Set, 10-Piece",
     price: 119.99,
     rating: 5,
